@@ -1,0 +1,10 @@
+# Compilação Java
+*.class
+
+# Pasta de build do Eclipse
+bin/
+
+# Eclipse IDE
+.settings/
+.classpath
+.project
