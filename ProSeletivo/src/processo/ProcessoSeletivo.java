@@ -22,9 +22,9 @@ public class ProcessoSeletivo {
 
 		campi.get(2).nome = "Campus Manaus Distrito Industrial";
 		campi.get(2).sigla = "CMDI";
-		campi.get(2).endereco = "Av. Rodrigo Otávio";
-		
-		campi.forEach(item -> System.out.println(item.sigla));
+		campi.get(2).endereco = "Av. Gov. Danilo de Matos Areosa";
+
+		mostrarCampi();
 	}
 
 	public static void novoCampus() {
@@ -34,8 +34,8 @@ public class ProcessoSeletivo {
 		System.out.print("Informe o nome do campus: ");
 		campus.nome = sc.nextLine();
 		System.out.print("Informe a sigla do campus: ");
-		campus.sigla = sc.next();
-		System.out.print("Informe o endereco do campus: ");
+		campus.sigla = sc.nextLine();
+		System.out.print("Informe o endereço do campus: ");
 		campus.endereco = sc.nextLine();
 
 		sc.close();
@@ -43,16 +43,16 @@ public class ProcessoSeletivo {
 	}
 
 	private static void mostrarCampus(Campus campus) {
+		System.out.print(campus.nome);
+		System.out.println(" - " + campus.sigla);
 
 	}
 
 	public static void mostrarCampi() {
 		int i = 0;
-		for (Campus cp : campi) {
-			System.out.print(i++);
-			System.out.print(" ");
-			mostrarCampus(cp);
+		for (Campus campus : campi) {
+			System.out.print(i++ + " - ");
+			mostrarCampus(campus);
 		}
 	}
-
 }
