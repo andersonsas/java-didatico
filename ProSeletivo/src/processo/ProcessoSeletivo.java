@@ -5,17 +5,16 @@ import java.util.Scanner;
 
 public class ProcessoSeletivo {
 	static ArrayList<Campus> campi = new ArrayList<Campus>();
+	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		novoCampus();
-		novoCampus();
+		novoCampus(sc);
+		novoCampus(sc);
 
 		mostrarCampi();
 	}
 
-	public static void novoCampus() {
-		Scanner sc = new Scanner(System.in);
-
+	public static void novoCampus(Scanner sc) {
 		Campus campus = new Campus();
 		System.out.print("Informe o nome do campus: ");
 		campus.nome = sc.nextLine();
@@ -24,14 +23,12 @@ public class ProcessoSeletivo {
 		System.out.print("Informe o endereço do campus: ");
 		campus.endereco = sc.nextLine();
 
-		sc.close();
 		campi.add(campus);
 	}
 
 	private static void mostrarCampus(Campus campus) {
 		System.out.print(campus.nome);
 		System.out.println(" - " + campus.sigla);
-
 	}
 
 	public static void mostrarCampi() {
