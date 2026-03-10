@@ -7,22 +7,8 @@ public class ProcessoSeletivo {
 	static ArrayList<Campus> campi = new ArrayList<Campus>();
 
 	public static void main(String[] args) {
-		Campus manausCentro = new Campus();
-		Campus manausZonaLeste = new Campus();
-
-		campi.add(manausCentro);
-		campi.add(manausZonaLeste);
-		campi.add(new Campus());
-		campi.add(new Campus());
-		campi.add(new Campus());
-
-		System.out.println("Tamanho do vetor Campi: " + campi.size());
-
 		novoCampus();
-
-		campi.get(2).nome = "Campus Manaus Distrito Industrial";
-		campi.get(2).sigla = "CMDI";
-		campi.get(2).endereco = "Av. Gov. Danilo de Matos Areosa";
+		novoCampus();
 
 		mostrarCampi();
 	}
