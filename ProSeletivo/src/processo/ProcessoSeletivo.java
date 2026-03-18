@@ -17,18 +17,18 @@ public class ProcessoSeletivo {
 	public static void novoCampus(Scanner sc) {
 		Campus campus = new Campus();
 		System.out.print("Informe o nome do campus: ");
-		campus.nome = sc.nextLine();
+		campus.setNome(sc.nextLine());
 		System.out.print("Informe a sigla do campus: ");
-		campus.sigla = sc.nextLine();
+		campus.setSigla(sc.nextLine());
 		System.out.print("Informe o endereço do campus: ");
-		campus.endereco = sc.nextLine();
+		campus.setEndereco(sc.nextLine());
 
 		campi.add(campus);
 	}
 
 	private static void mostrarCampus(Campus campus) {
-		System.out.print(campus.nome);
-		System.out.println(" - " + campus.sigla);
+		System.out.print(campus.getNome());
+		System.out.println(" - " + campus.getSigla());
 	}
 
 	public static void mostrarCampi() {
